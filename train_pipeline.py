@@ -206,7 +206,7 @@ if __name__ == "__main__":
     ])
 
     # dataset root (one subfolder per class)
-    data_path = r"c:/Users/Abrak/Documents/University of London/Fourth year/First Term/Final project/clean_training_set"
+    data_path = r"clean_training_set"
     master_dataset = datasets.ImageFolder(root=data_path, transform=transform_pipeline)
     # same files with augmentation, so indices match master_dataset
     master_dataset_train = datasets.ImageFolder(root=data_path, transform=transform_pipeline_train)

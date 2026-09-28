@@ -7,10 +7,10 @@ import shutil
 import pandas as pd
 
 # local paths, update for the local machine
-base_dir = "c:/Users/Abrak/Documents/University of London/Fourth year/First Term/Final project/data"
+base_dir = "data"
 csv_dir = os.path.join(base_dir, "csv")
 jpeg_dir = os.path.join(base_dir, "jpeg")
-output_dir = os.path.join(base_dir, "clean_training_set")
+output_dir = "clean_training_set"
 
 print("[SYSTEM] Initiating target folder reorganization...")
 
