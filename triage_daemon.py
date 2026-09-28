@@ -60,7 +60,7 @@ class ConformalTriageDaemon:
 
         result["true_label_in_prediction_set"] = true_label_in_set
         result["prediction_set_size"] = len(prediction_set)
-        # raw probs logged for later alpha sweeps
+        # temperature-scaled probs logged for later alpha sweeps
         result["probs"] = softmax_probs.detach().cpu().tolist()
         return result
 
@@ -185,7 +185,7 @@ if __name__ == "__main__":
     weights_path = f"deploy_artifacts/{model_name}_weights.pth"
     try:
         selected_model.load_state_dict(torch.load(weights_path, map_location=device))
-        print("Hybrid Dual-Topology Weights Injected.")
+        print(f"{model_name} weights loaded.")
     except FileNotFoundError:
         print(f"CRITICAL: Weights not found at {weights_path}.")
         exit(2)
@@ -218,7 +218,7 @@ if __name__ == "__main__":
     if malignant_index is None:
         print("WARNING: no class folder literally named 'Malignant' found - "
               "defaulting malignant_index to 1. Verify this against the "
-              "class mapping printed above before trusting Test 4's numbers.")
+              "class mapping printed above bbefore trusting the results.")
         malignant_index = 1
     # index saved at training time wins, thresholds were calibrated against it
     if malignant_index_from_meta is not None and malignant_index_from_meta != malignant_index:
