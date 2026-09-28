@@ -1,0 +1,8 @@
+# (developed with CUDA 12.1)
+torch==2.5.1
+torchvision==0.20.1
+timm==1.0.30
+numpy==2.4.4
+pandas==X.X.X
+matplotlib==3.10.8
+opencv-python-headless==4.13.0.92
