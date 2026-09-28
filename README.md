@@ -127,4 +127,9 @@ Single run on the 247 held-out scans (109 malignant, 138 benign).
 
 ## Licence
 
-The code in this repository is released under the MIT License (see `LICENSE`). The CBIS-DDSM dataset and the pretrained ResNet-18 (torchvision) and DINOv2 (timm) weights are not part of this licence and are subject to their own terms; check them before reuse, including reuse of the fine-tuned weights in the release, which are derived from those backbones.
+The code in this repository is released under the MIT License (see `LICENSE`).
+
+The CBIS-DDSM data (Kaggle mirror) is licensed CC BY-SA 3.0. The three telemetry CSVs contain labels
+derived from it and are therefore shared under CC BY-SA 3.0, not MIT. The dataset itself and the
+pretrained ResNet-18 (torchvision) and DINOv2 (timm) weights are not included and remain under
+their own terms.
