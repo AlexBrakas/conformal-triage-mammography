@@ -1,12 +1,12 @@
 """ Builds the ImageFolder dataset (benign / malignant) from the CBIS-DDSM CSVs and JPEG folders.
     inputs: mass and calc train-set CSVs in data/csv, JPEG series folders in data/jpeg
-    outputs: data/clean_training_set/{benign,malignant}/
+    outputs: clean_training_set/{benign,malignant}/
 """
 import os
 import shutil
 import pandas as pd
 
-# local paths, update for the local machine
+# paths relative to the repository root
 base_dir = "data"
 csv_dir = os.path.join(base_dir, "csv")
 jpeg_dir = os.path.join(base_dir, "jpeg")
